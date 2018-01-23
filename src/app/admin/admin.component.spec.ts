@@ -1,12 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RouterTestingModule } from '@angular/router/testing';
-
 import { AdminComponent } from './admin.component';
-import { AdminHeaderComponent } from './admin-header/admin-header.component';
-import { AdminLeftSideComponent } from './admin-left-side/admin-left-side.component';
-import { AdminFooterComponent } from './admin-footer/admin-footer.component';
-import { AdminControlSidebarComponent } from './admin-control-sidebar/admin-control-sidebar.component';
 
 describe('AdminComponent', () => {
   let component: AdminComponent;
@@ -14,16 +8,7 @@ describe('AdminComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [ 
-        RouterTestingModule 
-      ],
-      declarations: [ 
-        AdminComponent,
-        AdminHeaderComponent,
-        AdminLeftSideComponent,
-        AdminFooterComponent,
-        AdminControlSidebarComponent
-      ]
+      declarations: [ AdminComponent ]
     })
     .compileComponents();
   }));
@@ -34,7 +19,7 @@ describe('AdminComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should be created', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });
